@@ -1,0 +1,140 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#wrapper
+    +wrapper();
+    animation: fade-in 1s ease-out;
+    position: relative;
+
+    #guestbookHeading
+        color: #214F6E;
+
+    #toggleEntryButton
+        background-color: $color-lightest;
+        border-radius: 20px;
+        box-sizing: border-box;
+        color: $color-gaestebuch-accent;
+        cursor: pointer;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+
+    .entry-container
+        border: 4px solid #fdf4e7;
+        border-radius: 20px;
+        margin: 1rem 1rem 3rem;
+        padding: 1rem 2rem;
+        position: relative;
+        text-align: center;
+
+        .headline
+            color: #357fb1;
+            display: inline;
+
+        .content
+            color: #214F6E;
+            font-family: 'Handlee', cursive, sans-serif;
+            font-size: 1.3rem;
+            white-space: pre-line;
+
+        .author
+            bottom: -10px;
+            color: #17394f;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            position: absolute;
+            right: 30px;
+
+    #entryForm
+        height: 0px;
+        margin-bottom: 3rem;
+        overflow: hidden;
+        transition: height 0.5s;
+        -webkit-transition: height 0.5s; /* Chrome + Safari */
+
+        .label
+            box-sizing: border-box;
+            color: $color-gaestebuch-main;
+            margin: 0;
+            width: 100%;
+            @media screen and (min-width: $desktop-min)
+                clear: left;
+                float: left;
+                margin: 0 0 15px 0;
+                width: 150px;
+
+                .mobile
+                    display: none;
+
+            i
+                float: right;
+                padding-right: 1rem;
+
+            .done
+                color: green;
+
+            .missing
+                color: red;
+
+        .guestbookTextField
+            border: 1px solid $color-gaestebuch-main;
+            box-sizing: border-box;
+            color: $color-gaestebuch-main;
+            font-family: $font-family-arial;
+            margin: 0 0 20px;
+            width: 100%;
+            @media screen and (min-width: $desktop-min)
+                float: left;
+                margin: 0 0 15px 0;
+                width: 700px;
+
+        .requirementsIcons
+            display: none;
+            box-sizing: border-box;
+            margin: 0;
+            width: 100%;
+            padding-left: 1rem;
+            @media screen and (min-width: $desktop-min)
+                float: left;
+                margin: 0 0 15px 0;
+                width: 1rem;
+                display: block;
+
+            .done
+                color: green;
+
+            .missing
+                color: red;
+
+        .spamprotection
+            display: none;
+
+        textArea
+            border: 1px solid $color-gaestebuch-main;
+            box-sizing: border-box;
+            color: $color-gaestebuch-main;
+            font-family: $font-family-arial;
+            height: 431px;
+            resize: none;
+            width: 100%;
+
+        #submitButton
+            background-color: $color-lightest;
+            border: none;
+            border-radius: 20px;
+            color: $color-gaestebuch-lighter;
+            cursor: pointer;
+            font-family: $font-family-main;
+            padding: 0.5rem;
+            margin: 0.4rem;
+            width: 100%;
+            @media screen and (min-width: 420px)
+                width: 40%;
+            
+            &:hover
+                color: $color-gaestebuch-lightest;
+
+    .expand
+        height: 605px !important;
+        @media screen and (min-width: $desktop-min)
+            height: 575px !important;

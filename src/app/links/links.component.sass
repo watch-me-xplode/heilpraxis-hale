@@ -1,0 +1,20 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#wrapper
+    +wrapper();
+    animation: fade-in 1s ease-out;
+    position: relative;
+
+    p, h1, ul, li, a
+        color: $color-links-main;
+
+    a:hover
+        color: $color-links-accent;
+
+    p, li
+        font-size: $font-size-normal;
+
+    li
+        list-style-type: none;
+        padding: 5px;

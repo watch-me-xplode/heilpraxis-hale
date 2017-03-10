@@ -1,0 +1,9 @@
+<div id="wrapper">
+    <h1>Aktuelles</h1>
+
+    <div class="entry-container" *ngFor="let entry of entries">
+        <h2 class="headline"><i>{{entry.getHeadline()}}</i></h2>
+        <p class="content">{{entry.getContent()}}</p>
+        <p class="author">{{entry.getAuthor()}} - {{entry.getDate()}}</p>
+    </div>
+</div>

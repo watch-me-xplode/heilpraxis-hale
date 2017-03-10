@@ -1,0 +1,43 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#entryForm
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+    .guestbookTextField
+        border: 1px solid $color-gaestebuch-main;
+        box-sizing: border-box;
+        color: $color-gaestebuch-main;
+        font-family: $font-family-arial;
+        margin: 0 0 20px;
+        width: 100%;
+        @media screen and (min-width: $desktop-min)
+            float: left;
+            margin: 0 0 15px 0;
+            width: 700px;
+
+    textArea
+        border: 1px solid $color-gaestebuch-main;
+        box-sizing: border-box;
+        color: $color-gaestebuch-main;
+        font-family: $font-family-arial;
+        height: 431px;
+        resize: none;
+        width: 100%;
+
+    #submitButton
+        background-color: $color-lightest;
+        border: none;
+        border-radius: 20px;
+        color: $color-gaestebuch-lighter;
+        cursor: pointer;
+        font-family: $font-family-main;
+        padding: 0.5rem;
+        margin: 0.4rem;
+        width: 100%;
+        @media screen and (min-width: 420px)
+            width: 40%;
+        
+        &:hover
+            color: $color-gaestebuch-lightest;

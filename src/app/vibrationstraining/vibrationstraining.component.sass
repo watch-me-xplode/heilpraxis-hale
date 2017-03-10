@@ -1,0 +1,23 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#wrapper
+    +wrapper();
+    animation: fade-in 1s ease-out;
+    position: relative;
+
+    p, h1, h3, ul, li
+        color: $color-vibrationstraining-main;
+
+    p, li
+        font-size: $font-size-normal;
+
+    li
+        padding: 5px;
+
+    img
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+        width: 100%;

@@ -1,0 +1,51 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#wrapper
+    +wrapper();
+    animation: fade-in 1s ease-out;
+    position: relative;
+
+    p
+        font-size: $font-size-normal;
+
+    p, h1
+        color: $color-persoenlichkeitstraining-main;
+
+    #flexbox-wrapper
+        @include wrapper ($width: 90%);
+        margin-bottom: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        @media screen and (min-width: $desktop-min)
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+        #img-container
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 268px;
+            width: 100%;
+            @media screen and (min-width: $desktop-min)
+                flex-grow: 1;
+
+            img
+                width: 100%;
+                @media screen and (min-width: $desktop-min)
+                    display: relative;
+                    right: 69px;
+
+        #text-container
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem 1rem;
+            position: relative;
+            @media screen and (min-width: $desktop-min)
+                flex-grow: 1;
+                max-width: 450px;
+
+    #imgWide
+        border-radius: 20px;
+        width: 100%;

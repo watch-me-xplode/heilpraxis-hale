@@ -1,0 +1,27 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#wrapper
+    +wrapper();
+    animation: fade-in 1s ease-out;
+    position: relative;
+
+    p, h1, span, a
+        color: $color-kontakt-main;
+
+    p, span, a
+        font-size: $font-size-normal;
+
+    a:hover
+        color: $color-kontakt-accent;
+
+    .greaterFontsize
+        font-size: $font-size-greater;
+
+    #owner-container
+        padding: 5px 30px 17px;
+        border: 4px solid $color-lightest;
+        border-radius: 20px;
+
+        .adress-padding
+            padding-left: 1.37rem;

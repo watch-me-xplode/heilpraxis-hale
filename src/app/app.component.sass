@@ -1,0 +1,167 @@
+@import "./shared/sass/common-mixins";
+
+#app-wrapper
+    +wrapper ();
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+
+    #navi-header
+        border: 2px solid $color-main;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: $font-size-greater;
+        padding: 2px 25px 2px 0;
+        position: relative;
+        text-align: center;
+        transition: background-color 0.25s, color 3s;
+        -webkit-transition: background-color 0.25s, color 3s; /* Chrome + Safari */
+        @media screen and (min-width: $tablet-min)
+            display: none;
+
+        &:hover
+            background-color: $color-lighter;
+            border: 2px solid $color-lighter;
+
+        i
+            position: absolute;
+            right: 20px;
+            top: 4px;
+            transition: opacity 0.5s;
+            width: 1rem;
+
+    .expand
+        height: 698px !important;
+        @media screen and (min-width: 235px)
+            height: 655px !important;
+        @media screen and (min-width: 265px)
+            height: 611px !important;
+        @media screen and (min-width: 282px)
+            height: 569px !important;
+        @media screen and (min-width: 304px)
+            height: 546px !important;
+        @media screen and (min-width: 337px)
+            height: 523px !important;
+        @media screen and (min-width: 350px)
+            height: 500px !important;
+        @media screen and (min-width: 376px)
+            height: 456px !important;
+        @media screen and (min-width: 397px)
+            height: 433px !important;
+        @media screen and (min-width: 413px)
+            height: 410px !important;
+        @media screen and (min-width: 473px)
+            height: 387px !important;
+        @media screen and (min-width: 483px)
+            height: 344px !important;
+        @media screen and (min-width: 645px)
+            height: 301px !important;
+        @media screen and (min-width: 654px)
+            height: 258px !important;
+        @media screen and (min-width: 696px)
+            height: 215px !important;
+        @media screen and (min-width: 917px)
+            height: 172px !important;
+        @media screen and (min-width: 1094px)
+            height: 129px !important;
+
+    .navi
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        font-family: $font-family-heightsafe;
+        height: 0px;
+        justify-content: space-between;
+        margin: 1rem 0;
+        overflow: hidden;
+        padding: 0;
+        transition: height 0.5s;
+        width: 100%;
+        -webkit-transition: height 0.5s; /* Chrome + Safari */
+
+        .navi-element
+            background-color: $color-main;
+            border: 2px solid $color-main;
+            border-radius: 20px;
+            cursor: pointer;
+            flex-grow: 1;
+            font-size: $font-size-greater;
+            list-style-type: none;
+            margin: 5px 5px;
+            padding: 3px 5px;
+            text-align: center;
+            transition: background-color 0.25s, color 3s;
+            -webkit-transition: background-color 0.25s, color 3s; /* Chrome + Safari */
+
+            &:hover
+                background-color: $color-lighter;
+
+    #router-outlet
+        background-color: $color-main;
+        border-radius: 20px;
+        padding: 5px 5px 5px;
+        @media screen and (min-width: $tablet-min)
+            padding: 5px 20px 5px;
+        @media screen and (min-width: $desktop-min)
+            padding: 5px 50px 5px;
+
+    #quicklink-container
+        bottom: 5rem;
+        position: fixed;
+        right: 1rem;
+        z-index: 15;
+
+        a
+            background-color: $color-lightest;
+            border-radius: 50%;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+            display: block;
+            margin: 9px 0;
+            padding: 6px;
+            text-align: center;
+            transition: background-color 0.25s, color 3s, transform 0.5s, box-shadow 0.5s;
+            -webkit-transition: background-color 0.25s, color 3s, transform 0.5s, box-shadow 0.5s; /* Chrome + Safari */
+            @media screen and (min-width: $desktop-min)
+                background-color: $color-main;
+                margin: 9px;
+
+            &:hover
+                @media screen and (min-width: $desktop-min)
+                    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3)
+                    transform: scale(1.2);
+                    -webkit-transform: scale(1.2);
+                    -moz-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    -o-transform: scale(1.2);
+
+            &:last-child
+                
+                i
+                    position: relative;
+                    top: 2px;
+
+            i
+                font-size: 2rem;
+
+    footer
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        font-size: $font-size-greater;
+        justify-content: space-between;
+        padding: 5px 0;
+
+        a
+            background-color: $color-main;
+            border: 2px solid $color-main;
+            border-radius: 20px;
+            flex-grow: 1;
+            margin: 5px 5px;
+            padding: 3px 5px;
+            text-align: center;
+            transition: background-color 0.25s, color 2s;
+            -webkit-transition: background-color 0.25s, color 2s; /* Chrome + Safari */
+
+            &:hover
+                background-color: $color-lighter;

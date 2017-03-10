@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/shared/sass/common-mixins";
+
+body
+    background-color: $color-lightest;
+    font-family: $font-family-main;
+
+a
+    color: $color-darkest;
+    text-decoration: none;
+    transition: color 0.25s;
+    -webkit-transition: color 0.25s; /* Chrome + Safari */
+
+    &:link
+        color: $color-darkest;
+        text-decoration: none;
+
+    &:visited
+        color: $color-darkest;
+        text-decoration: none;
+ 
+    &:hover
+        color: $color-darker;
+        text-decoration: none;
+
+    &:active
+        color: $color-darker;
+        text-decoration: none;

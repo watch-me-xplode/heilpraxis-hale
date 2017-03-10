@@ -1,0 +1,31 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#wrapper
+    +wrapper();
+    animation: fade-in 1s ease-out;
+
+    p, span
+        font-size: $font-size-normal;
+
+    p, h1, span
+        color: $color-darkest;
+
+    a
+        font-size: $font-size-normal;
+
+    #telemedien-container
+        margin-bottom: 3rem;
+
+        div
+            border: 4px solid $color-lightest;
+            border-radius: 20px;
+
+            .adress-padding
+                padding-left: 1.37rem;
+            
+        #owner-container
+            padding: 5px 30px;
+
+        #developer-container
+            padding: 5px 30px 17px;

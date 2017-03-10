@@ -1,0 +1,11 @@
+<form id="entryForm">
+    <p class="label">Name:</p>
+    <input type="text" name="name" class="guestbookTextField" maxlength="500" [value]="userEntry.getAuthor()" (input)="userEntry.setAuthor($event.target.value)">
+    <br/>
+    <p class="label">Überschrift:</p>
+    <input type="text" name="headline" class="guestbookTextField" maxlength="500" [value]="userEntry.getHeadline()" (input)="userEntry.setHeadline($event.target.value)">
+    <br/>
+    <p class="label">Inhalt:</p>
+    <textarea name="content" rows="15" maxlength="10000" placeholder="Erstellen Sie hier Ihren Eintrag. Ihre Eingabe ist auf 10.000 Zeichen begrenzt." [value]="userEntry.getContent()" (input)="userEntry.setContent($event.target.value)"></textarea>
+    <input type="submit" value="Eintrag hinzufügen" id="submitButton" (click)="sendEntry()">
+</form>

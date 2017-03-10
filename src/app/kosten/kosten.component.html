@@ -1,0 +1,21 @@
+<div id="wrapper">
+    <p>Die Kosten und Gebühren richten sich nach der jeweiligen Behandlungsmethode, dem Zeitaufwand und dem Schweregrad der Erkrankung.</p>
+
+    <!-- for mobile and tablets -->
+    <div>
+        <div *ngFor="let model of models">
+            <p><b>{{model.getLabel()}}</b></p>
+            <p><b>{{model.getPriceString()}}</b></p>
+            <p>{{model.getInformation()}}</p>
+        </div>
+    </div>
+
+    <!-- for desktop and greater -->
+    <table>
+        <tr *ngFor="let model of models">
+            <td>{{model.getLabel()}}</td>
+            <td>{{model.getPriceString()}}</td>
+            <td>{{model.getInformation()}}</td>
+        </tr>
+    </table>
+</div>

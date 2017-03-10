@@ -1,0 +1,62 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#wrapper
+    +wrapper();
+    animation: fade-in 1s ease-out;
+    position: relative;
+
+    p, span
+        font-size: $font-size-normal;
+
+    p, h1, span
+        color: $color-pse-main;
+
+    #quote-wrapper
+        @include wrapper ($width: 90%);
+        margin-left: auto;
+        margin-right: auto;
+        @media screen and (min-width: $desktop-min)
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+        #img-container
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 448px;
+            width: 100%;
+            @media screen and (min-width: $desktop-min)
+                flex-grow: 1;
+
+            img
+                margin-bottom: 20px;
+                width: 100%;
+                @media screen and (min-width: $desktop-min)
+                    margin-bottom: 0;
+
+        #quote-container
+            border: 4px solid $color-lightest;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 450px;
+            padding: 2rem 1rem;
+            position: relative;
+            @media screen and (min-width: $desktop-min)
+                flex-grow: 1;
+
+            #quote
+                color: $color-pse-accent;
+                font-family: $font-family-handwriting;
+                font-size: $font-size-greater;
+                text-align: center;
+                width: 100%;
+
+            #author
+                bottom: -10px;
+                color: $color-pse-accent;
+                font-size: $font-size-smaller;
+                position: absolute;
+                right: 30px;

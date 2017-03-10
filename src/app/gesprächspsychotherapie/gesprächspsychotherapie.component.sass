@@ -1,0 +1,57 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#wrapper
+    +wrapper();
+    animation: fade-in 1s ease-out;
+    position: relative;
+
+    p, li
+        font-size: $font-size-greater;
+
+
+    p, h1, li
+        color: $color-psychotherapie-main;
+
+    h1
+        font-size: 1.4rem;
+        @media screen and (min-width: 340px)
+            font-size: 1.5rem;
+        @media screen and (min-width: $tablet-min)
+            font-size: $font-size-greatest;
+
+    p
+        text-align: center;
+
+    li
+        padding: 5px;
+        
+    #flexbox-wrapper
+        @include wrapper ($width: 90%);
+        margin-left: auto;
+        margin-right: auto;
+        @media screen and (min-width: $desktop-min)
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+        #img-container
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 448px;
+            width: 100%;
+            @media screen and (min-width: $desktop-min)
+                flex-grow: 1;
+
+            img
+                width: 100%;
+
+        #text-container
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 450px;
+            padding: 2rem 1rem;
+            position: relative;
+            @media screen and (min-width: $desktop-min)
+                flex-grow: 1;
