@@ -43,7 +43,7 @@ export class SwiperService {
         // start animation
         setInterval(() => {
             this.shiftRight();
-        }, 3000);
+        }, 5000);
     }
 
     /**

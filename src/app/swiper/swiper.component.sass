@@ -1,5 +1,6 @@
 #wrapper
-    height: 200px;
+    border-radius: 20px;
+    height: 190px;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -11,12 +12,17 @@
         width: 100%;
 
         img
+            border-radius: 20px;
             display: block;
-            left: 0;
+            left: 2.5%;
             position: absolute;
             top: 0;
-            width: 100%;
+            width: 95%;
             z-index: -1;
+
+        p
+            text-align: center;
+            width: 100%;
 
     .right
         left: 100%;
@@ -29,3 +35,9 @@
     .left
         left: -100%;
         opacity: 1;
+
+    .swiper-slide:nth-child(1) p
+        color: red;
+
+    .swiper-slide:nth-child(2) p
+        color: green;
