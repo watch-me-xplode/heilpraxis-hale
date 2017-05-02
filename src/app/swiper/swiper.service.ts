@@ -11,7 +11,7 @@ export class SwiperService {
 
     /**
      * Create slides from existing DOM Elements with class='swiper-slide'.
-     * Init must be called after all necessary DOM Elements are created.
+     * Init should be called after all necessary DOM Elements are created.
      */
     public init() {
         const slideElements = document.getElementsByClassName('swiper-slide');
@@ -39,11 +39,16 @@ export class SwiperService {
         }
         // set current slide
         this.currentSlide = slideArray[0];
+
+        // start animation
         setInterval(() => {
             this.shiftRight();
-        }, 2000);
+        }, 3000);
     }
 
+    /**
+     * shift all slides to the right
+     */
     public shiftRight() {
         this.currentSlide.domElement.classList.add('left');
         this.currentSlide.domElement.classList.remove('center');
