@@ -1,33 +1,7 @@
 <div id="app-wrapper">
 
-    <!-- Swiper -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" id="swiper-slide1" (click)="routeTo('/'); updatePageDependencies('Heilpraxis Daniela Hale')">
-                <p><b>Praxis für Naturheilverfahren und energetisches Heilen</b></p>
-            </div>
-            <div class="swiper-slide" id="swiper-slide2" (click)="routeTo('/'); updatePageDependencies('Heilpraxis Daniela Hale')">
-                <b>Naturheilpraxis Daniela Hale</b>
-            </div>
-            <div class="swiper-slide" id="swiper-slide3" (click)="routeTo('/innerwise'); updatePageDependencies('innerwise®')">
-
-            </div>
-            <div class="swiper-slide" id="swiper-slide4" (click)="routeTo('/psychosomatische_energetik'); updatePageDependencies('PSE (Psychosomatische Energetik)')">
-                <b>Psychosomatische Energetik</b>
-            </div>
-            <div class="swiper-slide" id="swiper-slide5" (click)="routeTo('/'); updatePageDependencies('Heilpraxis Daniela Hale')">
-
-            </div>
-            <div class="swiper-slide" id="swiper-slide6" (click)="routeTo('/persönlichkeitstraining'); updatePageDependencies('PT Persönlichkeitstraining')">
-                <p><b>Persönlichkeitstraining</b></p>
-            </div>
-            <div class="swiper-slide" id="swiper-slide7" (click)="routeTo('/gesprächspsychotherapie'); updatePageDependencies('Gesprächspsychotherapie')">
-                <p><b>Gesprächspsychotherapie</b></p>
-            </div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-    </div>
+    <!-- swiper -->
+    <app-swiper (navigate)="navigateTo($event)"></app-swiper>
 
     <!-- navi -->
     <p class="dynamic-accentcolor" id="navi-header" (click)="toggleAppNavi()">{{pageTitle}}

@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   private pageTitle = '';
 
   constructor(private router: Router) { }
@@ -17,14 +17,14 @@ export class AppComponent {
       if (window.innerWidth > 480) {
         document.getElementById('navi-app').classList.add('expand');
       }
-    }
+    };
     if (window.innerWidth > 480) {
       document.getElementById('navi-app').classList.add('expand');
     }
 
     // handle pageDependecies
     const url: string = window.location.pathname;
-    switch(url) {
+    switch (url) {
       case '/innerwise':
         this.pageTitle = 'innerwise®';
         break;
@@ -199,5 +199,10 @@ export class AppComponent {
 
   private routeTo(relativeUrl: string): void {
     this.router.navigate([relativeUrl]);
+  }
+
+  private navigateTo(params: string[]) {
+    this.routeTo(params[0]);
+    this.updatePageDependencies(params[1]);
   }
 }

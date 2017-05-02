@@ -3,6 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { KostenManager } from './shared/services/kosten.manager.service';
+import { GuestbookService } from './shared/services/guestbook.service';
+import { NewsService } from './shared/services/news.service';
+
+import { SwiperService } from './swiper/swiper.service';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AktuellesComponent } from './aktuelles/aktuelles.component';
@@ -20,11 +26,8 @@ import { OhrUndKörperkerzentherapieComponent } from './ohr-und-körperkerzenthe
 import { PersönlichkeitstrainingComponent } from './persönlichkeitstraining/persönlichkeitstraining.component';
 import { PseComponent } from './pse/pse.component';
 import { VibrationstrainingComponent } from './vibrationstraining/vibrationstraining.component';
-
-import { KostenManager } from './shared/services/kosten.manager.service';
-import { GuestbookService } from './shared/services/guestbook.service';
-import { NewsService } from './shared/services/news.service';
 import { QuickLinksComponent } from './quick-links/quick-links.component';
+import { SwiperComponent } from './swiper/swiper.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ import { QuickLinksComponent } from './quick-links/quick-links.component';
     PersönlichkeitstrainingComponent,
     PseComponent,
     VibrationstrainingComponent,
-    QuickLinksComponent
+    QuickLinksComponent,
+    SwiperComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import { QuickLinksComponent } from './quick-links/quick-links.component';
   providers: [
     KostenManager,
     GuestbookService,
-    NewsService
+    NewsService,
+    SwiperService
   ],
   bootstrap: [AppComponent]
 })
