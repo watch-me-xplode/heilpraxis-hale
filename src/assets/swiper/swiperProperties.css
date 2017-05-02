@@ -51,7 +51,7 @@
 }
 
 #swiper-slide3 {
-    background: url(pics/swiper_innerwise.jpg), white;
+    background: url(./pics/swiper_innerwise.jpg), white;
     background-size: cover;
     background-position: center;
 }

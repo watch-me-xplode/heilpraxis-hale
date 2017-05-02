@@ -1,0 +1,32 @@
+@import "../shared/sass/common-mixins";
+@import "../shared/sass/animations";
+
+#wrapper
+    bottom: 5rem;
+    position: fixed;
+    right: 1rem;
+    z-index: 15;
+    a
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+        display: block;
+        margin: 9px 0;
+        padding: 6px;
+        text-align: center;
+        transition: transform 0.5s, box-shadow 0.5s;
+        @media screen and (min-width: $desktop-min)
+            background-color: #fff;
+            margin: 9px;
+        &:hover
+            @media screen and (min-width: $desktop-min)
+                transform: scale(1.2);
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        &:last-child
+            i
+                position: relative;
+                top: 2px;
+        i
+            color: $color-main;
+            font-size: 2rem;
+            

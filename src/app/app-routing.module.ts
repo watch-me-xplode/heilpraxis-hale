@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from "./home/home.component";
-import { InnerwiseComponent } from "./innerwise/innerwise.component";
-import { PseComponent } from "./pse/pse.component";
-import { GesprächspsychotherapieComponent } from "./gesprächspsychotherapie/gesprächspsychotherapie.component";
-import { OhrUndKörperkerzentherapieComponent } from "./ohr-und-körperkerzentherapie/ohr-und-körperkerzentherapie.component";
-import { PersönlichkeitstrainingComponent } from "./persönlichkeitstraining/persönlichkeitstraining.component";
-import { EnergetischeWirbelsäulenaufrichtungComponent } from "./energetische-wirbelsäulenaufrichtung/energetische-wirbelsäulenaufrichtung.component";
-import { VibrationstrainingComponent } from "./vibrationstraining/vibrationstraining.component";
-import { KostenComponent } from "./kosten/kosten.component";
-import { KontaktComponent } from "./kontakt/kontakt.component";
-import { GästebuchComponent } from "./gästebuch/gästebuch.component";
-import { AktuellesComponent } from "./aktuelles/aktuelles.component";
-import { LinksComponent } from "./links/links.component";
-import { ImpressumComponent } from "./impressum/impressum.component";
+import { HomeComponent } from './home/home.component';
+import { InnerwiseComponent } from './innerwise/innerwise.component';
+import { PseComponent } from './pse/pse.component';
+import { GesprächspsychotherapieComponent } from './gesprächspsychotherapie/gesprächspsychotherapie.component';
+import { OhrUndKörperkerzentherapieComponent } from './ohr-und-körperkerzentherapie/ohr-und-körperkerzentherapie.component';
+import { PersönlichkeitstrainingComponent } from './persönlichkeitstraining/persönlichkeitstraining.component';
+import { EnergetischeWirbelsäulenaufrichtungComponent } from './energetische-wirbelsäulenaufrichtung/energetische-wirbelsäulenaufrichtung.component';
+import { VibrationstrainingComponent } from './vibrationstraining/vibrationstraining.component';
+import { KostenComponent } from './kosten/kosten.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+import { GästebuchComponent } from './gästebuch/gästebuch.component';
+import { AktuellesComponent } from './aktuelles/aktuelles.component';
+import { LinksComponent } from './links/links.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 import { AktuellesAddEntryComponent } from './aktuelles-add-entry/aktuelles-add-entry.component';
 
 const routes: Routes = [
@@ -102,8 +102,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
-  //imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: []
+  // imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

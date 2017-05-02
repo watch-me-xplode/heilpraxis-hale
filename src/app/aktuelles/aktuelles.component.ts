@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NewsService } from "../shared/services/news.service";
+import { NewsService } from '../shared/services/news.service';
 
-import { NewsEntry } from "../shared/models/news-entry.model";
+import { NewsEntry } from '../shared/models/news-entry.model';
 
 @Component({
   selector: 'app-aktuelles',

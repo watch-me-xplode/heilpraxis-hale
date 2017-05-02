@@ -1,6 +1,6 @@
 import { HeilpraxisHalePage } from './app.po';
 
-describe('heilpraxis-hale App', function() {
+describe('heilpraxis-hale App', () => {
   let page: HeilpraxisHalePage;
 
   beforeEach(() => {
