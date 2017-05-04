@@ -6,6 +6,7 @@ import { SwiperSlide } from './swiper-slide.model';
 export class SwiperService {
 
     private currentSlide: SwiperSlide;
+    private slides: SwiperSlide[] = [];
 
     constructor() { }
 
@@ -37,8 +38,9 @@ export class SwiperService {
             slideArray[i].nextSlide = slideArray[next];
             slideArray[i].prevSlide = slideArray[prev];
         }
-        // set current slide
+        // set current slide and slides
         this.currentSlide = slideArray[0];
+        this.slides = slideArray;
 
         // start animation
         setInterval(() => {
@@ -47,15 +49,40 @@ export class SwiperService {
     }
 
     /**
-     * shift all slides to the right
+     * shift all slides
      */
     public shiftRight() {
+        this.currentSlide = this.currentSlide.nextSlide;
+        this.updateClasses();
+    }
+
+    /**
+     * Jump to a new slide, which is not necesserely the next slide of the current slide.
+     * All css classes will be reset and are then distributed from the beginning.
+     * @param index: the position of the new slide in the slides array
+     */
+    public jumpTo(index: number) {
+        // remove old classes and set them to right
+        this.currentSlide.domElement.classList.add('right');
+        this.currentSlide.domElement.classList.remove('center', 'left');
+        this.currentSlide.nextSlide.domElement.classList.add('right');
+        this.currentSlide.nextSlide.domElement.classList.remove('center', 'left');
+        this.currentSlide.prevSlide.domElement.classList.add('right');
+        this.currentSlide.prevSlide.domElement.classList.remove('center', 'left');
+        // update
+        this.currentSlide = this.slides[index];
+        this.updateClasses();
+    }
+
+    /**
+     * update the css classes of the slides
+     */
+    private updateClasses() {
         this.currentSlide.domElement.classList.add('left');
         this.currentSlide.domElement.classList.remove('center');
         this.currentSlide.nextSlide.domElement.classList.add('center');
         this.currentSlide.nextSlide.domElement.classList.remove('right');
         this.currentSlide.prevSlide.domElement.classList.add('right');
         this.currentSlide.prevSlide.domElement.classList.remove('left');
-        this.currentSlide = this.currentSlide.nextSlide;
     }
 }
