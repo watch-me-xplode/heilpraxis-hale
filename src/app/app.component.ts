@@ -12,11 +12,11 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    // handle on resize event
-    window.onresize = function () {
+    window.onresize = () => {
       if (window.innerWidth > 480) {
         document.getElementById('navi-app').classList.add('expand');
       }
+      this.resizeSwiperHeight();
     };
     if (window.innerWidth > 480) {
       document.getElementById('navi-app').classList.add('expand');
@@ -204,5 +204,23 @@ export class AppComponent implements OnInit {
   private navigateTo(params: string[]) {
     this.routeTo(params[0]);
     this.updatePageDependencies(params[1]);
+  }
+
+  /**
+   * swiper height is rendered to match the current display width settings
+   */
+  private resizeSwiperHeight() {
+      const slides: any = document.getElementsByClassName('swiper-slide');
+      const slideWraper = document.getElementById('swiper-slide-wrapper');
+      if (slides.length > 0) {
+        const slidewidth = slides[0].clientWidth;
+        const slideHeight = slidewidth / 1200 * 190;
+        slideWraper.setAttribute('height', slideHeight + 'px');
+        slideWraper.style.height = slideHeight + 'px';
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].setAttribute('height', slideHeight + 'px');
+          slides[i].style.height = slideHeight + 'px';
+        }
+      }
   }
 }

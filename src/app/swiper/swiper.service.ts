@@ -41,6 +41,7 @@ export class SwiperService {
         // set current slide and slides
         this.currentSlide = slideArray[0];
         this.slides = slideArray;
+        this.updateClasses();
 
         // start animation
         setInterval(() => {
@@ -79,10 +80,10 @@ export class SwiperService {
      */
     private updateClasses() {
         this.currentSlide.domElement.classList.add('left');
-        this.currentSlide.domElement.classList.remove('center');
+        this.currentSlide.domElement.classList.remove('center', 'right');
         this.currentSlide.nextSlide.domElement.classList.add('center');
-        this.currentSlide.nextSlide.domElement.classList.remove('right');
+        this.currentSlide.nextSlide.domElement.classList.remove('right', 'left');
         this.currentSlide.prevSlide.domElement.classList.add('right');
-        this.currentSlide.prevSlide.domElement.classList.remove('left');
+        this.currentSlide.prevSlide.domElement.classList.remove('left', 'center');
     }
 }
