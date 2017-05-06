@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
     // handle/init pageDependecies
     const url: string = window.location.pathname;
     // window.location.href.endsWith('idee-und-idyll.de');
-    console.log(url);
     switch (url) {
       case '/innerwise':
         this.pageTitle = 'innerwise®';
