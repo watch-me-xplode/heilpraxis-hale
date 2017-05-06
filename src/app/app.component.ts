@@ -22,67 +22,7 @@ export class AppComponent implements OnInit {
       document.getElementById('navi-app').classList.add('expand');
     }
 
-    // handle/init pageDependecies
-    const url: string = window.location.pathname;
-    // window.location.href.endsWith('idee-und-idyll.de');
-    switch (url) {
-      case '/innerwise':
-        this.pageTitle = 'innerwise®';
-        break;
-      case '/psychosomatische_energetik':
-        this.pageTitle = 'PSE (Psychosomatische Energetik)';
-        break;
-      case '/gesprächspsychotherapie':
-        this.pageTitle = 'Gesprächspsychotherapie';
-        break;
-      case '/gespr%C3%A4chspsychotherapie':
-        this.pageTitle = 'Gesprächspsychotherapie';
-        break;
-      case '/ohr-und-körperkerzentherapie':
-        this.pageTitle = 'Ohr- und Körperkerzentherapie';
-        break;
-      case '/ohr-und-k%C3%B6rperkerzentherapie':
-        this.pageTitle = 'Ohr- und Körperkerzentherapie';
-        break;
-      case '/persönlichkeitstraining':
-        this.pageTitle = 'PT Persönlichkeitstraining';
-        break;
-      case '/pers%C3%B6nlichkeitstraining':
-        this.pageTitle = 'PT Persönlichkeitstraining';
-        break;
-      case '/energetische_wirbelsäulenaufrichtung':
-        this.pageTitle = 'Energetische Wirbelsäulenaufrichtung';
-        break;
-      case '/energetische_wirbels%C3%A4ulenaufrichtung':
-        this.pageTitle = 'Energetische Wirbelsäulenaufrichtung';
-        break;
-      case '/vibrationstraining':
-        this.pageTitle = 'Vibrationstraining';
-        break;
-      case '/kosten':
-        this.pageTitle = 'Kosten und Gebühren';
-        break;
-      case '/kontakt':
-        this.pageTitle = 'Kontakt';
-        break;
-      case '/gästebuch':
-        this.pageTitle = 'Gästebuch';
-        break;
-      case '/g%C3%A4stebuch':
-        this.pageTitle = 'Gästebuch';
-        break;
-      case '/aktuelles':
-        this.pageTitle = 'Aktuelles';
-        break;
-      case '/links':
-        this.pageTitle = 'Links';
-        break;
-      case '/impressum':
-        this.pageTitle = 'Impressum';
-        break;
-      default:
-        this.pageTitle = 'Heilpraxis Daniela Hale';
-    }
+    this.pageTitle = this.getPageTitleFromUrl(window.location.href);
     this.updatePageDependencies(this.pageTitle);
   }
 
@@ -232,5 +172,52 @@ export class AppComponent implements OnInit {
           slides[i].style.height = slideHeight + 'px';
         }
       }
+  }
+
+  /**
+   * Look at the current URL and get the current subpage.
+   * Input current URL.
+   * Returns the title of the current subpage.
+   */
+  private getPageTitleFromUrl(url: string): string {
+    let pageTitle = 'Heilpraxis Daniela Hale';
+    if (url.endsWith('/innerwise')) {
+      pageTitle = 'innerwise®';
+    } else if (url.endsWith('/psychosomatische_energetik')) {
+      pageTitle = 'PSE (Psychosomatische Energetik)';
+    } else if (url.endsWith('/gesprächspsychotherapie')) {
+      pageTitle = 'Gesprächspsychotherapie';
+    } else if (url.endsWith('/gespr%C3%A4chspsychotherapie')) {
+      pageTitle = 'Gesprächspsychotherapie';
+    } else if (url.endsWith('/ohr-und-körperkerzentherapie')) {
+      pageTitle = 'Ohr- und Körperkerzentherapie';
+    } else if (url.endsWith('/ohr-und-k%C3%B6rperkerzentherapie')) {
+      pageTitle = 'Ohr- und Körperkerzentherapie';
+    } else if (url.endsWith('/persönlichkeitstraining')) {
+      pageTitle = 'PT Persönlichkeitstraining';
+    } else if (url.endsWith('/pers%C3%B6nlichkeitstraining')) {
+      pageTitle = 'PT Persönlichkeitstraining';
+    } else if (url.endsWith('/energetische_wirbelsäulenaufrichtung')) {
+      pageTitle = 'Energetische Wirbelsäulenaufrichtung';
+    } else if (url.endsWith('/energetische_wirbels%C3%A4ulenaufrichtung')) {
+      pageTitle = 'Energetische Wirbelsäulenaufrichtung';
+    } else if (url.endsWith('/vibrationstraining')) {
+      pageTitle = 'Vibrationstraining';
+    } else if (url.endsWith('/kosten')) {
+      pageTitle = 'Kosten und Gebühren';
+    } else if (url.endsWith('/kontakt')) {
+      pageTitle = 'Kontakt';
+    } else if (url.endsWith('/gästebuch')) {
+      pageTitle = 'Gästebuch';
+    } else if (url.endsWith('/g%C3%A4stebuch')) {
+      pageTitle = 'Gästebuch';
+    } else if (url.endsWith('/aktuelles')) {
+      pageTitle = 'Aktuelles';
+    } else if (url.endsWith('/links')) {
+      pageTitle = 'Links';
+    } else if (url.endsWith('/impressum')) {
+      pageTitle = 'Impressum';
+    }
+    return pageTitle;
   }
 }
