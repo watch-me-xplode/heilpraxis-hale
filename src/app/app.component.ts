@@ -22,8 +22,10 @@ export class AppComponent implements OnInit {
       document.getElementById('navi-app').classList.add('expand');
     }
 
-    // handle pageDependecies
+    // handle/init pageDependecies
     const url: string = window.location.pathname;
+    // window.location.href.endsWith('idee-und-idyll.de');
+    console.log(url);
     switch (url) {
       case '/innerwise':
         this.pageTitle = 'innerwise®';
@@ -191,16 +193,25 @@ export class AppComponent implements OnInit {
     }
   }
 
+  /**
+   * Daniela Hales Email address
+   */
   private getMyEmail(): string {
     const firstPart = 'natur-heilen';
     const domain = 'web.de';
     return firstPart + '@' + domain;
   }
 
+  /**
+   * navigate to a new subpage (without updating the page dependencies)
+   */
   private routeTo(relativeUrl: string): void {
     this.router.navigate([relativeUrl]);
   }
 
+  /**
+   * navigate to the new subpage and update the page dependencies
+   */
   private navigateTo(params: string[]) {
     this.routeTo(params[0]);
     this.updatePageDependencies(params[1]);
