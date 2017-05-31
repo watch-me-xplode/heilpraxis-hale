@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { KostenManager } from './shared/services/kosten.manager.service';
 import { GuestbookService } from './shared/services/guestbook.service';
 import { NewsService } from './shared/services/news.service';
+import { VisitsService } from './shared/services/visits.service';
 
 import { SwiperService } from './swiper/swiper.service';
 
@@ -28,6 +29,7 @@ import { PseComponent } from './pse/pse.component';
 import { VibrationstrainingComponent } from './vibrationstraining/vibrationstraining.component';
 import { QuickLinksComponent } from './quick-links/quick-links.component';
 import { SwiperComponent } from './swiper/swiper.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { SwiperComponent } from './swiper/swiper.component';
     PseComponent,
     VibrationstrainingComponent,
     QuickLinksComponent,
-    SwiperComponent
+    SwiperComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { SwiperComponent } from './swiper/swiper.component';
     KostenManager,
     GuestbookService,
     NewsService,
+    VisitsService,
     SwiperService
   ],
   bootstrap: [AppComponent]

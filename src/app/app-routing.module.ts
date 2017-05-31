@@ -16,6 +16,7 @@ import { AktuellesComponent } from './aktuelles/aktuelles.component';
 import { LinksComponent } from './links/links.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { AktuellesAddEntryComponent } from './aktuelles-add-entry/aktuelles-add-entry.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {
@@ -91,6 +92,11 @@ const routes: Routes = [
   {
     path: 'add-news-entry',
     component: AktuellesAddEntryComponent,
+    children: []
+  },
+  {
+    path: 'show-counter',
+    component: AdminComponent,
     children: []
   },
   {

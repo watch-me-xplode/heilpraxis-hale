@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { VisitsService } from './shared/services/visits.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   private pageTitle = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private visitsService: VisitsService) { }
 
   ngOnInit() {
     window.onresize = () => {
@@ -21,9 +23,9 @@ export class AppComponent implements OnInit {
     if (window.innerWidth > 480) {
       document.getElementById('navi-app').classList.add('expand');
     }
-
     this.pageTitle = this.getPageTitleFromUrl(window.location.href);
     this.updatePageDependencies(this.pageTitle);
+    this.visitsService.addVisit();
   }
 
   private toggleAppNavi(): void {
