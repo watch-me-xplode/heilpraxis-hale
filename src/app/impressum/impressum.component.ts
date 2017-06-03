@@ -13,15 +13,15 @@ export class ImpressumComponent implements OnInit {
   }
 
   private getMyEmail(): string {
-    let firstPart: string = "natur-heilen";
-    let domain: string = "web.de";
-    return firstPart + "@" + domain;
+    const firstPart = 'natur-heilen';
+    const domain = 'web.de';
+    return firstPart + '@' + domain;
   }
 
   private getDeveloperEmail(): string {
-    let firstPart: string = "niko";
-    let domain: string = "watch-me-xplode.de";
-    return firstPart + "@" + domain;
+    const firstPart = 'webdesign';
+    const domain = 'nikolai-wohlgemuth.de';
+    return firstPart + '@' + domain;
   }
 
 }
