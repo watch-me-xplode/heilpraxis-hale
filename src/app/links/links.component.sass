@@ -15,6 +15,13 @@
     p, li
         font-size: $font-size-normal;
 
+    h1
+        font-size: $font-size-normal;
+        @media screen and (min-width: $tablet-min)
+            font-size: $font-size-greater;
+        @media screen and (min-width: $desktop-min)
+            font-size: $font-size-greatest;
+
     li
         list-style-type: none;
         padding: 5px;

@@ -13,18 +13,10 @@
         font-size: $font-size-normal;
 
     h1
-        font-size: 1rem;
-        @media screen and (min-width: 364px)
-            font-size: 1.1rem;
-        @media screen and (min-width: 390px)
-            font-size: 1.2rem;
-        @media screen and (min-width: 420px)
-            font-size: 1.3rem;
-        @media screen and (min-width: 450px)
-            font-size: 1.4rem;
+        font-size: $font-size-normal;
         @media screen and (min-width: $tablet-min)
-            font-size: 1.5rem;
-        @media screen and (min-width: 530px)
+            font-size: $font-size-greater;
+        @media screen and (min-width: $desktop-min)
             font-size: $font-size-greatest;
 
     img

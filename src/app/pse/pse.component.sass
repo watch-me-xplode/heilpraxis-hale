@@ -12,6 +12,13 @@
     p, h1, span
         color: $color-pse-main;
 
+    h1
+        font-size: $font-size-normal;
+        @media screen and (min-width: $tablet-min)
+            font-size: $font-size-greater;
+        @media screen and (min-width: $desktop-min)
+            font-size: $font-size-greatest;
+
     #quote-wrapper
         @include wrapper ($width: 90%);
         margin-left: auto;

@@ -6,6 +6,13 @@
     animation: fade-in 1s ease-out;
     position: relative;
 
+    h1
+        font-size: $font-size-normal;
+        @media screen and (min-width: $tablet-min)
+            font-size: $font-size-greater;
+        @media screen and (min-width: $desktop-min)
+            font-size: $font-size-greatest;
+
     #guestbookHeading
         color: #214F6E;
 

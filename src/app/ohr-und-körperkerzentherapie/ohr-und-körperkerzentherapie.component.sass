@@ -13,8 +13,10 @@
         font-size: $font-size-normal;
 
     h1
-        font-size: 1.5rem;
+        font-size: $font-size-normal;
         @media screen and (min-width: $tablet-min)
+            font-size: $font-size-greater;
+        @media screen and (min-width: $desktop-min)
             font-size: $font-size-greatest;
         
     .flexbox-wrapper
