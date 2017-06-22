@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Kosten } from "../models/kosten.model";
+import { Kosten } from '../models/kosten.model';
 
 @Injectable()
 export class KostenManager {
@@ -19,45 +19,45 @@ export class KostenManager {
         let result: Kosten[] = [];
         result.push(
             new Kosten()
-            .setLabel("Erstanamnese und Behandlungsplan:")
+            .setLabel('Erstanamnese und Behandlungsplan:')
             .setPrice(150)
-            .setInformation("")
+            .setInformation('')
             );
         result.push(
             new Kosten()
-            .setLabel("PSE - Behandlung je Testeinheit:")
+            .setLabel('PSE - Behandlung je Testeinheit:')
             .setPrice(100)
-            .setInformation("+ homöopathische Komplexmittel")
+            .setInformation('+ homöopathische Komplexmittel')
             );
         result.push(
             new Kosten()
-            .setLabel("Innerwise-Behandlung je Stunde:")
+            .setLabel('Innerwise-Behandlung je Stunde:')
             .setPrice(100)
-            .setInformation("+ Materialkosten")
+            .setInformation('+ Materialkosten')
             );
         result.push(
             new Kosten()
-            .setLabel("Gesprächstherapie GWG je Stunde:")
+            .setLabel('Gesprächstherapie GWG je Stunde:')
             .setPrice(90)
-            .setInformation("")
+            .setInformation('')
             );
         result.push(
             new Kosten()
-            .setLabel("Persönlichkeitstraining/Coaching je Stunde:")
+            .setLabel('Persönlichkeitstraining/ Coaching je Stunde:')
             .setPrice(100)
-            .setInformation("+ Materialkosten")
+            .setInformation('+ Materialkosten')
             );
         result.push(
             new Kosten()
-            .setLabel("Ohr- und Körperkerzenbehandlung:")
+            .setLabel('Ohr- und Körperkerzenbehandlung:')
             .setPrice(30)
-            .setInformation("")
+            .setInformation('')
             );
         result.push(
             new Kosten()
-            .setLabel("Vibrationstraining (10er Karte):")
+            .setLabel('Vibrationstraining (10er Karte):')
             .setPrice(150)
-            .setInformation("")
+            .setInformation('')
             );
         return result;
     }
