@@ -14,9 +14,9 @@ export class KostenManager {
         return this.models;
     }
 
-    //create models
+    // create models
     private createModels(): Kosten[] {
-        let result: Kosten[] = [];
+        const result: Kosten[] = [];
         result.push(
             new Kosten()
             .setLabel('Erstanamnese und Behandlungsplan:')
